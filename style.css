@@ -1,0 +1,190 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin-block-end: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+h1, h2,
+h3, h4 {
+    text-wrap: balance;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input, button,
+textarea, select {
+    font: inherit;
+}
+
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+:target {
+    scroll-margin-block: 5ex;
+}
+
+:root {
+    /* PRIMARY COLORS*/
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan:  hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    /* NEUTRAL COLORS */
+    --white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+    --very-light-gray:  hsl(0, 0%, 95%); /* background, headings, buttons */
+    font-family: 'Outfit', sans-serif;
+}
+
+/* MOBILE */
+@media screen and (max-width: 70em) {
+    .card-list {
+        flex-direction: column;
+    }
+    .card-button {
+        margin-top: 1rem;
+    }
+    .sedans-card {
+        border-radius: 1rem 1rem 0 0;
+    }
+    .luxury-card {
+        border-radius: 0 0 1rem 1rem;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 70em) {
+    .card-list {
+        flex-direction: row;
+    }
+    .card-button {
+        margin-top: 5rem;
+    }
+    .sedans-card {
+        border-radius: 1rem 0 0 1rem;
+    }
+    .luxury-card {
+        border-radius: 0 1rem 1rem 0;
+    }
+}
+
+
+body {
+    background: var(--very-light-gray);
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-list {
+    display: flex;
+    margin: 4rem 0;
+}
+
+.card {
+    background: var(--bright-orange);
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3rem;
+    row-gap: 0.75rem;
+}
+
+.card-heading {
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: var(--very-light-gray);
+    font-size: 2.25rem;
+    text-transform: uppercase;
+}
+
+.card-paragraph {
+    color: var(--white);
+    max-width: 16rem;
+}
+
+.card-button {
+    border-radius: 1.5rem;
+    border: 0.125rem solid transparent;
+    padding: 0.75rem 2rem;
+    background: var(--very-light-gray);
+    cursor: pointer;
+}
+
+.card-button:hover {
+    color: var(--very-light-gray);
+    border-color: var(--very-light-gray);
+}
+
+.sedans-button {
+    color: var(--bright-orange);
+}
+
+.sedans-button:hover {
+    background: var(--bright-orange);
+}
+
+.sedans-card {
+    background: var(--bright-orange);
+}
+
+.suvs-button {
+    color: var(--dark-cyan);
+}
+
+.suvs-button:hover {
+    background: var(--dark-cyan);
+}
+
+.suvs-card {
+    background: var(--dark-cyan);
+}
+
+.luxury-button {
+    color: var(--very-dark-cyan);
+}
+
+.luxury-button:hover {
+    background: var(--very-dark-cyan);
+}
+
+.luxury-card {
+    background: var(--very-dark-cyan);
+}
