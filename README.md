@@ -1,7 +1,7 @@
 - Превью: https://kseylo.github.io/3-column-preview-card-component/
 ## Установка:
 
-Установка node_modules
+Установка зависимостей
 ```
 pnpm install
 ```
